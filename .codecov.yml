@@ -3,5 +3,5 @@ coverage:
   round: down
   range: "70...100"
 ignore:
-  - */src/tests/
-  - /usr/include/.*
+  - "*/src/tests/"
+  - "usr/"
