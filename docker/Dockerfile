@@ -62,9 +62,7 @@ RUN if [ ${COVERAGE} ]; then \
   if [ ${CC} = clang ]; then \
     codecov -R ${PWD}/../${TRAVIS_REPO_SLUG#*/} -F "${CC}" -x "llvm-cov gcov" 2>&1 | grep -v "arcs.*block"; \
   else \
-    find . -name "*.gcda"; \
-    find . -name "*.gcda" -exec gcov -p -r {} \; 2>&1 | grep -v "arcs.*block";\
-    codecov -X gcov -R ${PWD}/../${TRAVIS_REPO_SLUG#*/} -F "${CC}"; \
+    codecov -a "-r" -X gcov -R ${PWD}/../${TRAVIS_REPO_SLUG#*/} -F "${CC}"  2>&1 | grep -v "arcs.*block"; \
   fi; \
 fi
 USER root
