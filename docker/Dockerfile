@@ -64,7 +64,7 @@ RUN if [ ${COVERAGE} ]; then \
   else \
     gcov --version; \
     g++ --version; \
-    find . -name "*.gcda" -exec gcov -p {} +;\
+    find . -name "*.gcda" -exec gcov -p -r {} + 2>&1 | grep -v "arcs.*block";\
     codecov -X gcov -R ${PWD}/../${TRAVIS_REPO_SLUG#*/} -F "${CC}" 2>&1 | grep -v "arcs.*block"; \
   fi; \
 fi
