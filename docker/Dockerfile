@@ -33,8 +33,6 @@ USER votca
 WORKDIR /home/votca/votca
 RUN mkdir build
 WORKDIR build
-RUN git rev-parse --show-toplevel
-RUN cat $(git rev-parse --show-toplevel)/.codecov.yml
 RUN ccache -z
 RUN cmake -DCMAKE_BUILD_TYPE=${CMAKE_BUILD_TYPE} \
   -DBUILD_CSGAPPS=ON -DBUILD_XTP=ON -DBUILD_CTP=ON -DCMAKE_INSTALL_PREFIX=/usr -DLIB=lib64 \
