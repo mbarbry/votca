@@ -9,7 +9,7 @@
 	url = ../../votca/csgapps.git
 [submodule "ctp"]
 	path = ctp
-	url = ../../votca/ctp.git
+	url = git@github.com:mbarbry/ctp.git
 [submodule "xtp"]
 	path = xtp
 	url = ../../votca/xtp.git
