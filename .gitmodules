@@ -12,7 +12,7 @@
 	url = git@github.com:mbarbry/ctp.git
 [submodule "xtp"]
 	path = xtp
-	url = ../../votca/xtp.git
+	url = git@github.com:mbarbry/xtp.git
 [submodule "csg-tutorials"]
 	path = csg-tutorials
 	url = ../../votca/csg-tutorials.git
